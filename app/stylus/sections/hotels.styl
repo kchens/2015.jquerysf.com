@@ -3,19 +3,34 @@
 .hotels
   background: orange
   text-align: left
-  padding: 10px
-  border: 3px dashed green
+  padding: 5px
+  border: 1px dashed green
 
   #hotel-title
-    min-width: auto
-    padding: 40px
-    position: relative
-    color: blue
-    border: 5px solid purple
+    color: orange
 
-  .hotel-info
-    min-width: auto
-    padding: 40px
-    position: relative
-    color: blue
-    border: 1px solid yellow
+  .hotel
+    background-color: white
+    display: inline-block
+    border: 1px solid purple
+    margin: 2px
+
+    .hotel-price
+      width: 10%
+      text-align: center
+      margin: 2px
+      padding: 5px
+      border: 1px solid blue
+
+    .hotel-info
+      color: blue
+      border: 1px solid purple
+
+  @media screen and (max-width: $small-width)
+    .hotel
+      width: 50%
+
+  @media screen and (min-width: $small-width + 1px)
+    #hotel-title
+    .hotel
+      width: 33%
