@@ -1,46 +1,20 @@
+mixin hotel(src, price, name, address, stars, reviews, distance)
+  .column.hotel
+    img.hotel-image(src=src)
+    .hotel-price= price
+    .hotel-info
+      h3= name
+      address= address
+      p= stars
+      p= reviews
+      p= distance
+      button Book
+
 section.hotels
-  .hotel
-    img.hotel-image
-    .hotel-price $$
-    .hotel-info
-      h3 Cova Hotel
-      address 655 Ellis Street
-      p 4 Stars - 1118 Reviews
-      p 10 Blocks Away
-      button Book
-  .hotel
-    img.hotel-image
-    .hotel-price $$
-    .hotel-info
-      h3 Cova Hotel
-      address 655 Ellis Street
-      p 4 Stars - 1118 Reviews
-      p 10 Blocks Away
-      button Book
-  .hotel
-    img.hotel-image
-    .hotel-price $$
-    .hotel-info
-      h3 Cova Hotel
-      address 655 Ellis Street
-      p 4 Stars - 1118 Reviews
-      p 10 Blocks Away
-      button Book
-  .hotel
-    img.hotel-image
-    .hotel-price $$
-    .hotel-info
-      h3 Cova Hotel
-      address 655 Ellis Street
-      p 4 Stars - 1118 Reviews
-      p 10 Blocks Away
-      button Book
-  .hotel
-    img.hotel-image
-    .hotel-price $$
-    .hotel-info
-      h3 Cova Hotel
-      address 655 Ellis Street
-      p 4 Stars - 1118 Reviews
-      p 10 Blocks Away
-      button Book
+  .container.cf
+    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
+    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
+    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
+    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
+    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
+    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")

@@ -3,8 +3,6 @@
 .hotels
   background: orange
   text-align: left
-  padding: 5px
-  border: 2px dashed green
 
   #hotel-title
     color: orange
@@ -13,8 +11,6 @@
     background-color: white
     float: none
     display: inline-block
-    border: 1px solid purple
-    margin: 2px
 
     .hotel-price
       width: 30px
@@ -25,12 +21,14 @@
 
     .hotel-info
       color: blue
-      border: 1px solid purple
+
+// Single Column
 
   @media screen and (max-width: $small-width)
     .hotel
       width: 50%
 
+// Three columns
   @media screen and (min-width: $small-width + 1px)
     #hotel-title
     .hotel
