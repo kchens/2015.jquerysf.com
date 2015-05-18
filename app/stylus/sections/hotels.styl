@@ -1,6 +1,7 @@
 // Hotels
 
 .hotels
+  padding: 0
   background: orange
   text-align: left
 
@@ -12,8 +13,12 @@
     float: none
     display: inline-block
 
+    .hotel-image
+      width: 100%
+      height: auto
+
     .hotel-price
-      width: 30px
+      width: 15%
       text-align: center
       margin: 2px
       padding: 5px
@@ -26,10 +31,10 @@
 
   @media screen and (max-width: $small-width)
     .hotel
-      width: 50%
+      width: 100%
 
 // Three columns
   @media screen and (min-width: $small-width + 1px)
     #hotel-title
     .hotel
-      width: 33%
+      width: 33.33%

@@ -1,7 +1,8 @@
 mixin hotel(src, price, name, address, stars, reviews, distance)
   .column.hotel
-    img.hotel-image(src=src)
-    .hotel-price= price
+    .hotel-panel
+      img.hotel-image(src=src)
+      .hotel-price= price
     .hotel-info
       h3= name
       address= address
@@ -11,10 +12,7 @@ mixin hotel(src, price, name, address, stars, reviews, distance)
       button Book
 
 section.hotels
-  .container.cf
-    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
-    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
-    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
-    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
-    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
-    +hotel(none, "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
+
+    +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
+    +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
+    +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", "4 Stars", "1118 Reviews", "10 Blocks Away")
