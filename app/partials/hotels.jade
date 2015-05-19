@@ -1,21 +1,47 @@
-mixin hotel(src, price, name, address, stars, reviews, distance)
-  .column.hotel
-    .hotel-panel
-      img.hotel-image(src=src)
-      .hotel-price= price
-    .hotel-info
-      h3= name
-      address= address
-      //- Logic to display # of stars
-      - var starCounter = 0
-        while starCounter < stars
-          i.fa.fa-star
-          - starCounter++
-      p= reviews
-      p= distance
-      button Book
+mixin hotel(src, price, name, address, mapLink, stars, reviews, distance, phone, phoneFormatted, email)
+  .column.hotel-column
+    .hotel
+      .hotel-panel
+        img.hotel-image(src=src)
+        .hotel-price= price
+      .hotel-info
+        .left
+          h3= name
+          .directions
+            address
+              a(href=mapLink)
+                i.fa.fa-map-marker
+                = address
+            p= distance
+        .right
+          .ratings
+            //- Logic to display # of stars
+            - var starCounter = 0
+              while starCounter < stars
+                i.fa.fa-star
+                - starCounter++
+            p= reviews
+          .contact
+            p
+              a(href="tel:+1" + phone)
+                i.fa.fa-phone
+                = phoneFormatted
+            p
+              a(href="mailto:" + email)
+                i.fa.fa-envelope
+                | Email
+    //- .tiles
+      .tile.hotel-tile
+        = name
+      .tile.phone-tile Phone
+      .tile.map-tile Map
+      .tile.email-tile Email
+
 
 section.hotels
-  +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", 4, "1118 Reviews", "10 Blocks Away")
-  +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", 4, "1118 Reviews", "10 Blocks Away")
-  +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", 4, "1118 Reviews", "10 Blocks Away")
+  +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", "https://goo.gl/maps/49q4E", 4, "1118 Reviews", "0.5 Miles Away", 4157713000, "(415) 771-3000", "reservation@covahotel.com")
+  +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", "https://goo.gl/maps/49q4E", 4, "1118 Reviews", "0.5 Miles Away", 4157713000, "(415) 771-3000", "reservation@covahotel.com")
+  +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", "https://goo.gl/maps/49q4E", 4, "1118 Reviews", "0.5 Miles Away", 4157713000, "(415) 771-3000", "reservation@covahotel.com")
+  +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", "https://goo.gl/maps/49q4E", 4, "1118 Reviews", "0.5 Miles Away", 4157713000, "(415) 771-3000", "reservation@covahotel.com")
+  +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", "https://goo.gl/maps/49q4E", 4, "1118 Reviews", "0.5 Miles Away", 4157713000, "(415) 771-3000", "reservation@covahotel.com")
+  +hotel('images/hotels/cova.jpg', "$$", "Cova Hotel", "655 Ellis Street", "https://goo.gl/maps/49q4E", 4, "1118 Reviews", "0.5 Miles Away", 4157713000, "(415) 771-3000", "reservation@covahotel.com")

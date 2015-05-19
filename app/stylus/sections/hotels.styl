@@ -2,13 +2,13 @@
 
 .hotels
   padding: 0
-  text-align: left
 
   #hotel-title
     color: orange
 
-  .hotel
+  .hotel-column
     float: none
+    position: relative
     display: inline-block
     &:nth-child(3n+1)
       background: $teal
@@ -18,54 +18,98 @@
       background: darken($teal,50%)
     // margin: 0.5% 0.5%
 
-    .hotel-panel
-      position: relative
+    .hotel
       background: inherit
 
-      .hotel-image
-        width: 100%
-        height: auto
-        // margin-bottom: 1%
-
-      .hotel-price
-        padding: 1% 2%
-        text-align: center
-        position: absolute
+      .hotel-panel
+        position: relative
         background: inherit
-        font-weight: bold
+
+        .hotel-image
+          width: 100%
+          height: auto
+
+        .hotel-price
+          padding: 1% 2%
+          text-align: center
+          position: absolute
+          background: inherit
+          font-weight: bold
+          color: white
+          top: 45%
+          opacity: 0.8
+
+      .hotel-info
+        text-align: left
+        background: inherit
         color: white
-        top: 45%
-        opacity: 0.8
+        margin: 15px
 
-    .hotel-info
-      background: inherit
-      color: white
-      margin-bottom: 15px
+        p, address
+          margin-bottom: 0px
 
-      p, address
-        margin-bottom: 0px
+        .left, .right
+          width: 50%
+          display: inline-block
 
-      .fa-star
-        color: white
+        .left h3
+          margin-bottom: 22px
 
-      button
-        display: none
+        .directions, .contact
+          margin-top: 5px
+          margin-bottom: 5px
 
-    // .hotel-info:hover
-    //   visibility: hidden
+        .fa
+          color: white
+          margin-right: 3px
 
-    // .hotel-info:hover button
-    //   display: block
+        a
+          color: white
+
+        button
+          display: none
+
+  // .hotel:hover
+  //   opacity: 0
+  //   z-index: -1
+
+  // .tiles
+  //   position: absolute
+  //   color: white
+  //   background: gray
+  //   top: 0
+  //   left: 0
+  //   width: 100%
+  //   height: 100%
+
+  //   .tile
+  //     opacity: 1
+  //     width: 50%
+  //     height: 50%
+  //     border: 1px solid white
+
+  //   .hotel-tile
+  //     background: yellow
+
+  //   .phone-tile
+  //     background: orange
+  //     border: 1px solid white
+
+  //   .map-tile
+  //     background: blue
+  //     border: 1px solid white
+
+  //   .email-tile
+  //     background: green
+  //     border: 1px solid white
 
 // Single Column
-
   @media screen and (max-width: $small-width)
-    .hotel
+    .hotel-column
       width: 100%
 
 // Three columns
   @media screen and (min-width: $small-width + 1px)
     #hotel-title
-    .hotel
-      // width: 32.33%
+    .hotel-column
       width: 33.33%
