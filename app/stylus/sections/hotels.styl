@@ -2,30 +2,37 @@
 
 .hotels
   padding: 0
-  background: orange
+  background: white
   text-align: left
 
   #hotel-title
     color: orange
 
   .hotel
-    background-color: white
     float: none
     display: inline-block
+    margin: 0.5% 0.5%
 
-    .hotel-image
-      width: 100%
-      height: auto
+    .hotel-panel
+      position: relative
 
-    .hotel-price
-      width: 15%
-      text-align: center
-      margin: 2px
-      padding: 5px
-      border: 1px solid blue
+      .hotel-image
+        width: 100%
+        height: auto
+        margin-bottom: 1%
+
+      .hotel-price
+        padding: 1% 2%
+        text-align: center
+        position: absolute
+        background-color: $teal
+        font-weight: bold
+        color: white
+        top: 40%
 
     .hotel-info
-      color: blue
+      background-color: $teal
+      color: white
 
 // Single Column
 
@@ -37,4 +44,4 @@
   @media screen and (min-width: $small-width + 1px)
     #hotel-title
     .hotel
-      width: 33.33%
+      width: 32.33%
