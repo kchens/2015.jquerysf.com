@@ -30,12 +30,11 @@ mixin hotel(src, price, name, address, mapLink, stars, reviews, distance, phone,
               a(href="mailto:" + email)
                 i.fa.fa-envelope
                 | Email
-    //- .tiles
-      .tile.hotel-tile
-        = name
-      .tile.phone-tile Phone
-      .tile.map-tile Map
-      .tile.email-tile Email
+    .book.overlay
+      h2
+        a(href="mailto:" + email).expand
+          | Book
+      a.close-overlay.hidden x
 
 
 section.hotels

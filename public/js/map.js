@@ -11,9 +11,9 @@ function initialize() {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  var contentString = '<div class="venue-marker">'+ 
-      '<p class="venue-name">The Regency Ballroom</p>'+ 
-      '<p class="venue-address">1300 Van Ness Avenue<br />San Francisco, CA</p>'+ 
+  var contentString = '<div class="venue-marker">'+
+      '<p class="venue-name">The Regency Ballroom</p>'+
+      '<p class="venue-address">1300 Van Ness Avenue<br />San Francisco, CA</p>'+
       '<a class="venue-link" href="https://goo.gl/maps/dDbua">View on Google Maps</a>'
       '</div>';
 
@@ -35,7 +35,7 @@ function initialize() {
   google.maps.event.addDomListener(window, "resize", function() {
     var center = map.getCenter();
     google.maps.event.trigger(map, "resize");
-    map.setCenter(center); 
+    map.setCenter(center);
   });
 }
 google.maps.event.addDomListener(window, 'load', initialize);

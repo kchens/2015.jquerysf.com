@@ -20,6 +20,7 @@
 
     .hotel
       background: inherit
+      position: relative
 
       .hotel-panel
         position: relative
@@ -49,11 +50,16 @@
           margin-bottom: 0px
 
         .left, .right
-          width: 50%
           display: inline-block
 
         .left h3
           margin-bottom: 22px
+
+        .left
+          width: 55%
+
+        .right
+          width: 45%
 
         .directions, .contact
           margin-top: 5px
@@ -66,42 +72,35 @@
         a
           color: white
 
-        button
-          display: none
+    .overlay
+      background: black
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      opacity: .5
+      z-index: 1
+      text-align: center
 
-  // .hotel:hover
-  //   opacity: 0
-  //   z-index: -1
+      h2
+        line-height: 300px
 
-  // .tiles
-  //   position: absolute
-  //   color: white
-  //   background: gray
-  //   top: 0
-  //   left: 0
-  //   width: 100%
-  //   height: 100%
+      .close-overlay
+        display: block
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 2
+        background: orange
+        width: 20px
+        height: 20px
+        text-align: center
+        line-height: 17px
 
-  //   .tile
-  //     opacity: 1
-  //     width: 50%
-  //     height: 50%
-  //     border: 1px solid white
+      a.close-overlay.hidden
+        display: none
 
-  //   .hotel-tile
-  //     background: yellow
-
-  //   .phone-tile
-  //     background: orange
-  //     border: 1px solid white
-
-  //   .map-tile
-  //     background: blue
-  //     border: 1px solid white
-
-  //   .email-tile
-  //     background: green
-  //     border: 1px solid white
 
 // Single Column
   @media screen and (max-width: $small-width)
