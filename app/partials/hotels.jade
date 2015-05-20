@@ -7,29 +7,29 @@ mixin hotel(src, price, name, address, mapLink, stars, reviews, distance, phone,
       .hotel-info
         .left
           h3= name
-          .directions
+          .bottom
             address
               a(href=mapLink)
                 i.fa.fa-map-marker
                 = address
             p= distance
         .right
-          .ratings
+          //- .top
             //- Logic to display # of stars
+          .bottom
             - var starCounter = 0
               while starCounter < stars
                 i.fa.fa-star
                 - starCounter++
             p= reviews
-          .contact
-            p
-              a(href="tel:+1" + phone)
-                i.fa.fa-phone
-                = phoneFormatted
-            p
-              a(href="mailto:" + email)
-                i.fa.fa-envelope
-                | Email
+            //- p
+            //-   a(href="tel:+1" + phone)
+            //-     i.fa.fa-phone
+            //-     = phoneFormatted
+            //- p
+            //-   a(href="mailto:" + email)
+            //-     i.fa.fa-envelope
+            //-     | Email
     .book.overlay
       h2
         a(href="mailto:" + email).expand

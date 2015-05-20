@@ -39,6 +39,7 @@
           color: white
           top: 45%
           opacity: 0.8
+          z-index: 3
 
       .hotel-info
         text-align: left
@@ -61,7 +62,7 @@
         .right
           width: 45%
 
-        .directions, .contact
+        .bottom
           margin-top: 5px
           margin-bottom: 5px
 
@@ -75,7 +76,7 @@
     .overlay
       background: black
       position: absolute
-      // width: 100%
+      width: 100%
       height: 0
       top: 0
       left: 0
@@ -102,22 +103,24 @@
         display: none
 
       a.expand
-        visibility: hidden
-        // display: block
-        // position: absolute
+        display: none
         z-index: 2
         color: white
 
 // Hover Effect
 
   .hotel-column .overlay
-    width: 100%
+    opacity: 0
 
   .hotel-column.hover .overlay
     height: 100%
+    opacity: 1
+
+    a.close-overlay.hidden
+      display: block
 
     a.expand
-      visibility: visible
+      display: block
 
 // Single Column
   @media screen and (max-width: $small-width)
