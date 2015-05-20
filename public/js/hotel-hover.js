@@ -7,7 +7,7 @@ $(document).ready(function(){
       $(".hotel-column").click(function(e){
           if (!$(this).hasClass("hover")) {
               $(this).addClass("hover");
-              $(".close-overlay").removeClass("hidden");
+              $(this).find(".close-overlay").removeClass("hidden");
           }
       });
       // handle the closing of the overlay

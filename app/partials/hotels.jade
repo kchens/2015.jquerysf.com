@@ -34,7 +34,8 @@ mixin hotel(src, price, name, address, mapLink, stars, reviews, distance, phone,
         a(href="mailto:" + email).expand
           i.fa.fa-envelope
           | Email
-      a.close-overlay.hidden x
+      a.close-overlay.hidden
+        i.fa.fa-times
 
 
 section.hotels
