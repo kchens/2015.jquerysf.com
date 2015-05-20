@@ -75,7 +75,7 @@
     .overlay
       background: black
       position: absolute
-      width: 100%
+      // width: 100%
       height: 0
       top: 0
       left: 0
@@ -101,10 +101,23 @@
       a.close-overlay.hidden
         display: none
 
+      a.expand
+        visibility: hidden
+        // display: block
+        // position: absolute
+        z-index: 2
+        color: white
+
 // Hover Effect
+
+  .hotel-column .overlay
+    width: 100%
 
   .hotel-column.hover .overlay
     height: 100%
+
+    a.expand
+      visibility: visible
 
 // Single Column
   @media screen and (max-width: $small-width)
