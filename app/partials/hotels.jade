@@ -4,6 +4,20 @@ mixin hotel(src, price, name, address, mapLink, stars, reviews, distance, phone,
       .hotel-panel
         img.hotel-image(src=src)
         .hotel-price= price
+        .book.overlay
+          h2
+            a(href="mailto:" + email).expand
+              | Book
+          p
+            a(href="tel:+1" + phone).expand
+              i.fa.fa-phone
+              = phoneFormatted
+          p
+            a(href="mailto:" + email).expand
+              i.fa.fa-envelope
+              | Email
+          a.close-overlay.hidden
+            i.fa.fa-times
       .hotel-info
         .left
           h3= name
@@ -22,20 +36,7 @@ mixin hotel(src, price, name, address, mapLink, stars, reviews, distance, phone,
                 i.fa.fa-star
                 - starCounter++
             p= reviews
-    .book.overlay
-      h2
-        a(href="mailto:" + email).expand
-          | Book
-      p
-        a(href="tel:+1" + phone).expand
-          i.fa.fa-phone
-          = phoneFormatted
-      p
-        a(href="mailto:" + email).expand
-          i.fa.fa-envelope
-          | Email
-      a.close-overlay.hidden
-        i.fa.fa-times
+
 
 
 section.hotels

@@ -4,7 +4,7 @@ $(document).ready(function(){
       // $(".close-overlay").removeClass("hidden");
 
       // handle the adding of hover class when clicked
-      $(".hotel-column").click(function(e){
+      $(".hotel").click(function(e){
           if (!$(this).hasClass("hover")) {
               $(this).addClass("hover");
               $(this).find(".close-overlay").removeClass("hidden");
@@ -14,14 +14,14 @@ $(document).ready(function(){
       $(".close-overlay").click(function(e){
           e.preventDefault();
           e.stopPropagation();
-          if ($(this).closest(".hotel-column").hasClass("hover")) {
-              $(this).closest(".hotel-column").removeClass("hover");
+          if ($(this).closest(".hotel").hasClass("hover")) {
+              $(this).closest(".hotel").removeClass("hover");
               $(this).addClass("hidden");
           }
       });
   } else {
     // handle the mouseenter functionality
-    $(".hotel-column").mouseenter(function(){
+    $(".hotel").mouseenter(function(){
         $(this).addClass("hover");
     })
     // handle the mouseleave functionality
