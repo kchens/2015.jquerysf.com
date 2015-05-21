@@ -29,8 +29,8 @@ mixin hotel(src, name, price, address, mapLink, distance, stars, reviews, tripAd
                 = address
             p= distance
           .right
-            //- Logic to display # of stars
             p
+              //- Logic to display # of stars
               - var starCounter = 0
                 while starCounter < stars
                   i.fa.fa-star
